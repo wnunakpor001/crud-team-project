@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple_Crud_App</title>
+  <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Team Management System</h1>
+    
+    <!-- Form -->
+    <form id="teamForm" class="card">
+      <input id="teamName" placeholder="Team Name" required />
+      <input id="president" placeholder="President" required />
+      <input id="vicePresident" placeholder="Vice President" required />
+      <input id="sportingDirector" placeholder="Sporting Director" required />
+      <input id="location" placeholder="Location" required />
+      <input id="yearFormed" type="number" placeholder="Year Formed" required />
+      <input id="stadium" placeholder="Stadium" required />
+      <input id="league" placeholder="League" required />
+
+    <h3>Coaching Staffs</h3>
+      <input id="headCoach" placeholder="Head Coach" required />
+      <input id="assistantCoach" placeholder="Assistant Coach" />
+      <input id="goalkeeperCoach" placeholder="Goalkeeper Coach" />
+
+    <h3>Players</h3>
+     <div id="playersContainer">
+     <!-- Player rows will be added here dynamically -->
+     </div>
+
+      <button type="button" id="addPlayerBtn">+ Add Player</button>
+      <button type="submit">Create Team</button>
+    </form>
+
+    <!-- Teams List -->
+    <h2>Teams</h2>
+    <div class="teams-grid" id="teamList">
+      <!-- team cards will be added here -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

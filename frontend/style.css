@@ -1,0 +1,196 @@
+
+
+
+/* General Styles */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url(image5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: rgb(28, 29, 30);
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 30px auto;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #eae2e2;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin: 20px 0 12px;
+  color: #dbcdcd;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-left: 5px solid #2563eb;
+  padding-left: 10px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #070b18;
+  border-bottom: 2px solid #a0bcf4;
+  padding-bottom: 4px;
+}
+
+/* Form Styles */
+form.card {
+  background: #a49b9b;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 14px;
+}
+
+form.card input, 
+form.card select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form.card input:focus,
+form.card select:focus {
+  border-color: #232425;
+  box-shadow: 0 0 6px rgba(37,99,235,0.3);
+}
+
+form.card button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+form.card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+}
+
+/* Players Section */
+#playersContainer {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.player-entry {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.player-entry input, 
+.player-entry select {
+  flex: 1;
+}
+
+/* Player Remove Button */
+.player-entry .removeBtn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.player-entry .removeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* Teams Grid */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Team Card */
+.team {
+  background: #bcdae9;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 10px ba(0,0,0,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.team:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.team p {
+  margin: 6px 0;
+  color: #120c0c;
+  font-size: 15px;
+}
+
+/* Action Buttons */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #e9dede;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.actions .edit-btn {
+  background: linear-gradient(135deg, #0eac48, #16a34a);
+}
+
+.actions .edit-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.actions .delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.actions .delete-btn:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
