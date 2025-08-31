@@ -28,6 +28,9 @@ app.get(/^\/(?!api).*/, (req, res) => {
 
 // ✅ Connect to MongoDB & Start Server
 
+console.log("🔎 MONGO_URI from env:", process.env.MONGO_URI ? "Loaded ✅" : "Not Found ❌");
+
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
