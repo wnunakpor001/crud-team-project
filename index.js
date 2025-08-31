@@ -24,9 +24,9 @@ app.get(/^\/(?!api).*/, (req, res) => {
 
 // ✅ Connect to MongoDB & Start Server
 mongoose
-  .connect(process.env.MONGODB_URI,{
-    dbName: "NodeAPI",
-  })
+  .connect(
+    "mongodb+srv://wisdomnunakpor:B1TORmAMjVG6rRGP@backenddb.auiljtk.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB"
+  )
   .then(() => {
     console.log("✅ Connected to database");
     const PORT = process.env.PORT || 3000; // use PORT from env in production
