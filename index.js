@@ -25,7 +25,7 @@ app.get(/^\/(?!api).*/, (req, res) => {
 // ✅ Connect to MongoDB & Start Server
 mongoose
   .connect(
-    "mongodb+srv://admin:"
+    ".env file should have MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("✅ Connected to database");
