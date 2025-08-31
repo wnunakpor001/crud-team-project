@@ -1,5 +1,5 @@
 // ------ API Base URL ------
-const API_BASE = "http://localhost:3000/api/teams";
+const API_BASE = "https://simple-crud-teamapp.onrender.com/api/teams";
 
 // ------ DOM refs ------
 const form = document.getElementById("teamForm");

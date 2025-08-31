@@ -1,42 +1,39 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Team = require("./models/team.model.js");
 const teamRoutes = require("./routes/team.route.js");
+const path = require("path");
+const cors = require("cors");
+
 const app = express();
 
-const cors = require("cors");
-app.use(cors());
-
-
-
-// middleware
+// ✅ Middleware
+app.use(cors()); // allow all origins (can be restricted later)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("frontend"));
 
-// routes
+// ✅ API Routes
 app.use("/api/teams", teamRoutes);
 
-const path = require("path");
+// ✅ Serve static frontend (make sure "frontend" folder has index.html, style.css, etc.)
+app.use(express.static(path.join(__dirname, "frontend")));
 
-// ...
-
-// Serve index.html on root
-app.get("/", (req, res) => {
+// ✅ Fallback: send index.html only for non-API routes
+app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "index.html"));
 });
 
-
+// ✅ Connect to MongoDB & Start Server
 mongoose
   .connect(
     "mongodb+srv://wisdomnunakpor:B1TORmAMjVG6rRGP@backenddb.auiljtk.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB"
   )
   .then(() => {
-    console.log("Connected to database");
-    app.listen(3000, () => {
-      console.log("Server is running on http://localhost:3000");
+    console.log("✅ Connected to database");
+    const PORT = process.env.PORT || 3000; // use PORT from env in production
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   })
-  .catch(() => {
-    console.log("Connection failed!");
+  .catch((err) => {
+    console.error("❌ Database connection failed:", err.message);
   });
