@@ -24,9 +24,9 @@ app.get(/^\/(?!api).*/, (req, res) => {
 
 // ✅ Connect to MongoDB & Start Server
 mongoose
-  .connect(
-    ".env file should have MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGODB_URI,{
+    dbName: "NodeAPI",
+  })
   .then(() => {
     console.log("✅ Connected to database");
     const PORT = process.env.PORT || 3000; // use PORT from env in production
