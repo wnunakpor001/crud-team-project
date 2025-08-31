@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const teamRoutes = require("./routes/team.route.js");
 const path = require("path");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 
@@ -23,13 +24,12 @@ app.get(/^\/(?!api).*/, (req, res) => {
 });
 
 // ✅ Connect to MongoDB & Start Server
+
 mongoose
-  .connect(
-    "mongodb+srv://wisdomnunakpor:B1TORmAMjVG6rRGP@backenddb.auiljtk.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("✅ Connected to database");
-    const PORT = process.env.PORT || 3000; // use PORT from env in production
+    const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
