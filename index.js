@@ -25,7 +25,7 @@ app.get(/^\/(?!api).*/, (req, res) => {
 // ✅ Connect to MongoDB & Start Server
 mongoose
   .connect(
-    "mongodb+srv://wisdomnunakpor:B1TORmAMjVG6rRGP@backenddb.auiljtk.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB"
+    "mongodb+srv://admin:"
   )
   .then(() => {
     console.log("✅ Connected to database");
