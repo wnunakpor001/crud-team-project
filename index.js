@@ -1,9 +1,12 @@
+require("dotenv").config();
+
+
 const express = require("express");
 const mongoose = require("mongoose");
 const teamRoutes = require("./routes/team.route.js");
 const path = require("path");
 const cors = require("cors");
-require("dotenv").config();
+
 
 const app = express();
 
