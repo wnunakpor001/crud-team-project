@@ -1,10 +1,7 @@
-
-
-
 /* General Styles */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-image: url(image5.jpg);
+  background: url(image4.jpg) no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -16,26 +13,17 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 950px;
-  margin: 30px auto;
+  width: 130%;
+  max-width: 1000px;
+  margin: 45px auto;
 }
 
 /* Headings */
 h1 {
   text-align: center;
   font-size: 2.2rem;
-  color: #eae2e2;
+  color: #e8ecf0;
   margin-bottom: 25px;
-}
-
-h2 {
-  margin: 20px 0 12px;
-  color: #dbcdcd;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border-left: 5px solid #2563eb;
-  padding-left: 10px;
 }
 
 h3 {
@@ -43,14 +31,14 @@ h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #070b18;
-  border-bottom: 2px solid #a0bcf4;
+  color: #0e0f0f;
+  border-bottom: 2px solid #154bb6;
   padding-bottom: 4px;
 }
 
 /* Form Styles */
 form.card {
-  background: #a49b9b;
+  background: #acd8cf;
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 16px;
@@ -62,7 +50,7 @@ form.card {
 form.card input, 
 form.card select {
   padding: 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #bfd1d100;
   border-radius: 10px;
   font-size: 15px;
   outline: none;

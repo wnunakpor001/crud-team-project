@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // ------ API Base URL ------
 const API_BASE = "https://simple-crud-teamapp.onrender.com/api/teams";
 
@@ -220,3 +226,13 @@ async function loadTeams() {
 
 // ------ init ------
 loadTeams();
+
+
+
+
+
+
+
+
+
+
