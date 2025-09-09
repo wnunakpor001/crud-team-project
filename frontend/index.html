@@ -2,46 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple_Crud_App</title>
-  <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+  <title>Home | Simple CRUD App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Team Management System</h1>
-    
-    <!-- Form --> 
-    <form id="teamForm" class="card">
-    <h3>Create / Update Team</h3>
-      <input id="teamName" placeholder="Team Name" required />
-      <input id="president" placeholder="President" required />
-      <input id="vicePresident" placeholder="Vice President" required />
-      <input id="sportingDirector" placeholder="Sporting Director" required />
-      <input id="location" placeholder="Location" required />
-      <input id="yearFormed" type="number" placeholder="Year Formed" required />
-      <input id="stadium" placeholder="Stadium" required />
-      <input id="league" placeholder="League" required />
+  <nav>
+    <h2>Simple CRUD App</h2>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="create.html">Create/Update Team</a></li>
+    </ul>
+  </nav>
 
-    <h3>Coaching Staffs</h3>
-      <input id="headCoach" placeholder="Head Coach" required />
-      <input id="assistantCoach" placeholder="Assistant Coach" />
-      <input id="goalkeeperCoach" placeholder="Goalkeeper Coach" />
-
-    <h3>Players</h3>
-     <div id="playersContainer">
-     <!-- Player rows will be added here dynamically -->
-     </div>
-
-      <button type="button" id="addPlayerBtn">+ Add Player</button>
-      <button type="submit">Create Team</button>
-    </form>
-
-    <!-- Teams List -->
-    <h1>Teams</h1>
-    <div class="teams-grid" id="teamList">
-      <!-- team cards will be added here -->
-    </div>
+  <div class="hero">
+    <h1>Welcome to this amazing site.</h1>
+    <p>Here, you can <strong>create</strong>, <strong>read</strong>, <strong>update</strong>, and <strong>delete</strong> a team.</p>
+    <a href="create.html" class="btn">Get Started</a>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

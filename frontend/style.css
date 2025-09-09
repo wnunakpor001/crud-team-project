@@ -1,83 +1,162 @@
 /* General Styles */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url(image4.jpg) no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  display: flex;
+  background-image: url(image4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: center;
-  color: rgb(28, 29, 30);
+  color: #5e0c0c;
 }
 
-.container {
-  width: 130%;
-  max-width: 1000px;
-  margin: 45px auto;
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a90e2;
+  color: #fff;
+  padding: 1rem 2rem;
 }
 
-/* Headings */
+nav h2 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ebeeec;
+}
+
 h1 {
   text-align: center;
   font-size: 2.2rem;
-  color: #e8ecf0;
+  color: #e8ecef;
   margin-bottom: 25px;
 }
 
-h3 {
-  margin-top: 25px;
-  margin-bottom: 10px;
+.hero p {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #0e0f0f;
-  border-bottom: 2px solid #154bb6;
-  padding-bottom: 4px;
+  margin-bottom: 2rem;
 }
 
-/* Form Styles */
-form.card {
-  background: #acd8cf;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+.btn {
+  background: #ff9800;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+.btn-secondary {
+  background: #4a90e2;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #357abd;
+}
+
+/* Container & Card */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
   display: grid;
-  gap: 14px;
+  gap: 0.5rem;
 }
 
-form.card input, 
-form.card select {
-  padding: 12px;
-  border: 1px solid #bfd1d100;
+.card h3 {
+  margin-top: 1rem;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 15px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-form.card input:focus,
-form.card select:focus {
-  border-color: #232425;
-  box-shadow: 0 0 6px rgba(37,99,235,0.3);
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
 }
 
 form.card button {
   padding: 12px;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0eac48, #16a34a);
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-form.card button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+.team-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px ba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 /* Players Section */
@@ -93,16 +172,18 @@ form.card button:hover {
   align-items: center;
 }
 
-.player-entry input, 
+.player-entry input,
 .player-entry select {
   flex: 1;
+  padding: 12px;
+  border-radius: 12px;
 }
 
 /* Player Remove Button */
 .player-entry .removeBtn {
-  padding: 6px 10px;
+  padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   background: linear-gradient(135deg, #ef4444, #dc2626);
   color: #fff;
   font-size: 13px;
@@ -126,15 +207,15 @@ form.card button:hover {
 /* Team Card */
 .team {
   background: #bcdae9;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 4px 10px ba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 10px ba(0, 0, 0, 0.08);
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .team:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .team p {
@@ -164,7 +245,7 @@ form.card button:hover {
 
 .actions button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .actions .edit-btn {
