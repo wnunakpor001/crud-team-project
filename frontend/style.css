@@ -3,13 +3,13 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(image4.jpg);
+  background-image: url(image3.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
-  color: #5e0c0c;
+  color: #110c0c;
 }
 
 /* Navbar */
@@ -56,13 +56,13 @@ nav a:hover {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ebeeec;
+  color: #eef3f0;
 }
 
 h1 {
   text-align: center;
   font-size: 2.2rem;
-  color: #e8ecef;
+  color: #2c1806;
   margin-bottom: 25px;
 }
 
