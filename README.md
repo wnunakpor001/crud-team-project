@@ -235,9 +235,9 @@ Frontend → API → Controller → Database → Response → Frontend
 ## 👨‍💻 Author
 
 **Wisdom Nunakpor**
-BSc. Mathematical Science Student
-University of Ghana, Legon
-Backend Developer (Node.js, Express, MongoDB)
+BSc. Mathematical Science Student ||
+University of Ghana, Legon ||
+Backend Developer (Node.js, Express, MongoDB) ||
 Aspiring Data Analyst & DevOps Engineer
 
 ---
