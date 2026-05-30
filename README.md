@@ -68,7 +68,7 @@ project-root/
 Create a `.env` file in the root directory:
 
 ```env id="env2"
-PORT=3000
+PORT = 5000
 MONGO_URI=your_mongodb_atlas_connection_string
 ```
 
@@ -113,7 +113,7 @@ npm start
 The server runs on:
 
 ```text id="c16"
-http://localhost:3000
+http://localhost:5000
 ```
 
 ---
